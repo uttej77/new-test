@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="log">
+               <a href="index.html"><img src="logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                       <li>
+                         <a href="index.html"><i class="fas fa-search" style="font-size:20px"></i> Search</a>
+                       </li>
+                      <li>
+                         <a href=""> <i class="fas fa-percentage" style="font-size:20px"></i>Offers</a>
+                      </li>
+                      <li>
+                        <a href=""> <i class="fas fa-question-circle" style="font-size:20px"></i>Help</a>
+                      </li>
+                      <li>
+                          <a href=""> <i class="fas fa-user" style="font-size:20px"></i>Sign in</a>
+                      </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- ------ -->
+    <div class="accountpage">
+        <div class="conts">
+            <div class="row">
+                <div class="col-a">
+                    <div class="form-cont">
+                        <div class="form-btn">
+                            <span onclick="Login()">Login</span>
+                            <span onclick="Reg()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form method="POST" id="loginform" action="process.php">
+                            <input type="text" name="username"placeholder="Username" required autofocus>
+                            <input type="password" name="password" placeholder="password" required>
+                            <input type="submit" class="btn" value="Login">
+                            <a href="">Forgot password</a>
+                        </form>
+                        <form method="POST" id="regform" action="registraion.php">
+                            <input type="text" name="username" placeholder="Username" required autofocus>
+                            <input type="email" name="email" placeholder="Email">
+                            <input type="password" name="password" placeholder="password" maxlength="10" required>
+                            <input type="submit" class= "btn"value="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cities">
+        <div class="small-cont2">
+            <h3>Cities We To Deliver To </h3>
+            <div class="row">
+                
+                <div class="col5">
+                     <p3>Delhi NCR</p3>
+                </div>
+                <div class="col5">
+                    <p3>Mumbai </p3>
+               </div>
+               <div class="col5">
+                     <p3>Bangalore </p3>
+                </div>
+                <div class="col5">
+                    <p3>Hyderabad </p3>
+               </div>
+               <div class="col5">
+                     <p3>Ahmedabad </p3>
+                </div>
+                <div class="col5">
+                    <p3>Chennai </p3>
+               </div>
+               <div class="col5">
+                     <p3>Kolkata </p3>
+                </div>
+                <div class="col5">
+                    <p3>Surat</p3>
+               </div>
+               <div class="col5">
+                     <p3>Pune</p3>
+                </div>
+                <div class="col5">
+                    <p3>Jaipur</p3>
+               </div>
+               <div class="col5">
+                     <p3>Lucknow</p3>
+                </div>
+                <div class="col5">
+                    <p3>Kanpur</p3>
+               </div>
+               <div class="col5">
+                     <p3>Nagpur</p3>
+                </div>
+                <div class="col5">
+                    <p3>Indore</p3>
+               </div>
+               <div class="col5">
+                    <p3>Patna</p3>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="bra">
+        <div class="small-cont2">
+            <div class="row">
+                <div class="col6">
+                    <h5>COMPANY</h5>
+                    <p6>Who We Are<br>Blog<br>Careers<br>Report Fraud<br>Contact<br>Investor Relations</p6>
+                </div>
+                <div class="col6">
+                 <h5>USEFUL LINKS</h5>
+                 <p6>Contact Us<br>FAQ<br>Terms<br>Security<br>Sitemap</p6>
+             </div>
+             <div class="col6">
+                 <h5>ONLINE SHOPPING</h5>
+                 <img src="playstor.png">
+                 <br>
+                 <img src="play.png">
+                 <br>
+             </div>
+             <div class="col6">
+                 <h5>KEEP IN TOUCH</h5>
+                 <div class="soc">
+                     <img src="icons8-facebook-240.png" alt="">
+                     <img src="icons8-twitter-144.png" alt="">
+                     <img src="icons8-instagram-90.png" alt="">
+                 </div>
+             </div>
+             <h8>In case of any concern,Contact Us</h8>
+             <h9>&#169 2021 WWW.Whizz.com. All rights reserved</h9>
+            </div>
+        </div>
+    </div>
+    <!-- -------js -->
+    <script>
+        var loginform=document.getElementById("loginform");
+        var regform=document.getElementById("regform");
+        var indicator = document.getElementById("indicator");
+        function Reg(){
+            regform.style.transform="translateX(0px)";
+            loginform.style.transform="translateX(0px)";
+            indicator.style.transform="translateX(100px)";
+        }
+        function Login(){
+            regform.style.transform="translateX(300px)";
+            loginform.style.transform="translateX(300px)";
+            indicator.style.transform="translateX(0px)";
+        }
+    </script>
+</body>
+</html>
